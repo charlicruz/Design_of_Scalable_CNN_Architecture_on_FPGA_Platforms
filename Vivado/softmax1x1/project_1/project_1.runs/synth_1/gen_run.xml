@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1614359475" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/softmax1.dcp">
+  <File Type="PA-TCL" Name="softmax1.tcl"/>
+  <File Type="REPORTS-TCL" Name="softmax1_reports.tcl"/>
+  <File Type="RDS-RDS" Name="softmax1.vds"/>
+  <File Type="RDS-UTIL" Name="softmax1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="softmax1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="softmax1.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../HLS/softmax2/solution1/impl/ip/tmp.srcs/sources_1/ip/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../HLS/softmax2/solution1/impl/ip/tmp.srcs/sources_1/ip/softmax1_sitodp_32ns_64_6_no_dsp_1_ip/softmax1_sitodp_32ns_64_6_no_dsp_1_ip.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_dexp_64ns_64ns_64_18_full_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_sitodp_32ns_64_6_no_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="softmax1"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/softmax1.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

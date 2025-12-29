@@ -1,0 +1,16 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: F:/XilinxMario/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ReLU_behav xil_defaultlib.ReLU -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behav of entity xil_defaultlib.ReLU_flow_control_loop_pipe [relu_flow_control_loop_pipe_defa...]
+Compiling architecture behav of entity xil_defaultlib.relu
+Built simulation snapshot ReLU_behav

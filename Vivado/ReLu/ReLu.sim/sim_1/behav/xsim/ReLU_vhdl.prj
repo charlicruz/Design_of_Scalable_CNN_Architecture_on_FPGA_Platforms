@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ReLu.srcs/sources_1/ReLU_flow_control_loop_pipe.vhd" \
+"../../../../ReLu.srcs/sources_1/ReLU.vhd" \
+
+# Do not sort compile order
+nosort

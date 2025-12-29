@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_general_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_general" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="90.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="230.801 ns"></ZoomEndTime>
+      <Cursor1Time time="225.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="51" />
+   <wvobject fp_name="/tb_general/ap_clk" type="logic">
+      <obj_property name="ElementShortName">ap_clk</obj_property>
+      <obj_property name="ObjectShortName">ap_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_rst" type="logic">
+      <obj_property name="ElementShortName">ap_rst</obj_property>
+      <obj_property name="ObjectShortName">ap_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_start" type="logic">
+      <obj_property name="ElementShortName">ap_start</obj_property>
+      <obj_property name="ObjectShortName">ap_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_q0" type="array">
+      <obj_property name="ElementShortName">in1_q0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_q0[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_q1" type="array">
+      <obj_property name="ElementShortName">in1_q1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_q1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_q0" type="array">
+      <obj_property name="ElementShortName">in2_q0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_q0[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_q1" type="array">
+      <obj_property name="ElementShortName">in2_q1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_q1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_q0" type="array">
+      <obj_property name="ElementShortName">in3_q0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_q0[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_q1" type="array">
+      <obj_property name="ElementShortName">in3_q1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_q1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_q0" type="array">
+      <obj_property name="ElementShortName">in4_q0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in4_q0[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_q1" type="array">
+      <obj_property name="ElementShortName">in4_q1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in4_q1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_q0" type="array">
+      <obj_property name="ElementShortName">out_r_q0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_r_q0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_q1" type="array">
+      <obj_property name="ElementShortName">out_r_q1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_r_q1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_done" type="logic">
+      <obj_property name="ElementShortName">ap_done</obj_property>
+      <obj_property name="ObjectShortName">ap_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_idle" type="logic">
+      <obj_property name="ElementShortName">ap_idle</obj_property>
+      <obj_property name="ObjectShortName">ap_idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_local_block" type="logic">
+      <obj_property name="ElementShortName">ap_local_block</obj_property>
+      <obj_property name="ObjectShortName">ap_local_block</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_local_deadlock" type="logic">
+      <obj_property name="ElementShortName">ap_local_deadlock</obj_property>
+      <obj_property name="ObjectShortName">ap_local_deadlock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/ap_ready" type="logic">
+      <obj_property name="ElementShortName">ap_ready</obj_property>
+      <obj_property name="ObjectShortName">ap_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_address0" type="array">
+      <obj_property name="ElementShortName">in1_address0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_address0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_ce0" type="logic">
+      <obj_property name="ElementShortName">in1_ce0</obj_property>
+      <obj_property name="ObjectShortName">in1_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_d0" type="array">
+      <obj_property name="ElementShortName">in1_d0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_d0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_we0" type="logic">
+      <obj_property name="ElementShortName">in1_we0</obj_property>
+      <obj_property name="ObjectShortName">in1_we0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_address1" type="array">
+      <obj_property name="ElementShortName">in1_address1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_address1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_ce1" type="logic">
+      <obj_property name="ElementShortName">in1_ce1</obj_property>
+      <obj_property name="ObjectShortName">in1_ce1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_d1" type="array">
+      <obj_property name="ElementShortName">in1_d1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in1_d1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in1_we1" type="logic">
+      <obj_property name="ElementShortName">in1_we1</obj_property>
+      <obj_property name="ObjectShortName">in1_we1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_address0" type="array">
+      <obj_property name="ElementShortName">in2_address0[10:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_address0[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_ce0" type="logic">
+      <obj_property name="ElementShortName">in2_ce0</obj_property>
+      <obj_property name="ObjectShortName">in2_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_d0" type="array">
+      <obj_property name="ElementShortName">in2_d0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_d0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_we0" type="logic">
+      <obj_property name="ElementShortName">in2_we0</obj_property>
+      <obj_property name="ObjectShortName">in2_we0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_address1" type="array">
+      <obj_property name="ElementShortName">in2_address1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_address1[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_ce1" type="logic">
+      <obj_property name="ElementShortName">in2_ce1</obj_property>
+      <obj_property name="ObjectShortName">in2_ce1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_d1" type="array">
+      <obj_property name="ElementShortName">in2_d1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in2_d1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in2_we1" type="logic">
+      <obj_property name="ElementShortName">in2_we1</obj_property>
+      <obj_property name="ObjectShortName">in2_we1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_address0" type="array">
+      <obj_property name="ElementShortName">in3_address0[17:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_address0[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_ce0" type="logic">
+      <obj_property name="ElementShortName">in3_ce0</obj_property>
+      <obj_property name="ObjectShortName">in3_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_d0" type="array">
+      <obj_property name="ElementShortName">in3_d0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_d0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_we0" type="logic">
+      <obj_property name="ElementShortName">in3_we0</obj_property>
+      <obj_property name="ObjectShortName">in3_we0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_address1" type="array">
+      <obj_property name="ElementShortName">in3_address1[17:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_address1[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_ce1" type="logic">
+      <obj_property name="ElementShortName">in3_ce1</obj_property>
+      <obj_property name="ObjectShortName">in3_ce1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_d1" type="array">
+      <obj_property name="ElementShortName">in3_d1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in3_d1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in3_we1" type="logic">
+      <obj_property name="ElementShortName">in3_we1</obj_property>
+      <obj_property name="ObjectShortName">in3_we1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_address0" type="array">
+      <obj_property name="ElementShortName">in4_address0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">in4_address0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_ce0" type="logic">
+      <obj_property name="ElementShortName">in4_ce0</obj_property>
+      <obj_property name="ObjectShortName">in4_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_d0" type="array">
+      <obj_property name="ElementShortName">in4_d0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in4_d0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/in4_we0" type="logic">
+      <obj_property name="ElementShortName">in4_we0</obj_property>
+      <obj_property name="ObjectShortName">in4_we0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_address0" type="array">
+      <obj_property name="ElementShortName">out_r_address0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">out_r_address0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_ce0" type="logic">
+      <obj_property name="ElementShortName">out_r_ce0</obj_property>
+      <obj_property name="ObjectShortName">out_r_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_d0" type="array">
+      <obj_property name="ElementShortName">out_r_d0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_r_d0[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/out_r_we0" type="logic">
+      <obj_property name="ElementShortName">out_r_we0</obj_property>
+      <obj_property name="ObjectShortName">out_r_we0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_general/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

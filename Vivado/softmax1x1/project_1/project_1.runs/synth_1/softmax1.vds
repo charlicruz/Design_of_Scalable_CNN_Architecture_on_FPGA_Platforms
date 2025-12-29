@@ -1,0 +1,417 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 26 18:11:18 2021
+# Process ID: 23288
+# Current directory: C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log softmax1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source softmax1.tcl
+# Log file: C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1/softmax1.vds
+# Journal file: C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1\vivado.jou
+# Running On: DESKTOP-QG17U6G, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 34233 MB
+#-----------------------------------------------------------
+source softmax1.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/VIVADO/softmax1x1/project_1/project_1.srcs/utils_1/imports/synth_1/softmax1.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/VIVADO/softmax1x1/project_1/project_1.srcs/utils_1/imports/synth_1/softmax1.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top softmax1 -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12116
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1566.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'softmax1' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1.vhd:27]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'softmax1_sitodp_32ns_64_6_no_dsp_1' declared at 'C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_sitodp_32ns_64_6_no_dsp_1.vhd:9' bound to instance 'sitodp_32ns_64_6_no_dsp_1_U1' of component 'softmax1_sitodp_32ns_64_6_no_dsp_1' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'softmax1_sitodp_32ns_64_6_no_dsp_1' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_sitodp_32ns_64_6_no_dsp_1.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'softmax1_sitodp_32ns_64_6_no_dsp_1_ip' declared at 'c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_sitodp_32ns_64_6_no_dsp_1_ip/synth/softmax1_sitodp_32ns_64_6_no_dsp_1_ip.v:60' bound to instance 'softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u' of component 'softmax1_sitodp_32ns_64_6_no_dsp_1_ip' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_sitodp_32ns_64_6_no_dsp_1.vhd:50]
+INFO: [Synth 8-6157] synthesizing module 'softmax1_sitodp_32ns_64_6_no_dsp_1_ip' [c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_sitodp_32ns_64_6_no_dsp_1_ip/synth/softmax1_sitodp_32ns_64_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [F:/XilinxMario/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (1#1) [F:/XilinxMario/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'softmax1_sitodp_32ns_64_6_no_dsp_1_ip' (16#1) [c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_sitodp_32ns_64_6_no_dsp_1_ip/synth/softmax1_sitodp_32ns_64_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-256] done synthesizing module 'softmax1_sitodp_32ns_64_6_no_dsp_1' (17#1) [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_sitodp_32ns_64_6_no_dsp_1.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1' declared at 'C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_dexp_64ns_64ns_64_18_full_dsp_1.vhd:9' bound to instance 'dexp_64ns_64ns_64_18_full_dsp_1_U2' of component 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_dexp_64ns_64ns_64_18_full_dsp_1.vhd:27]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip' declared at 'c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip/synth/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip.v:60' bound to instance 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u' of component 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip' [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_dexp_64ns_64ns_64_18_full_dsp_1.vhd:52]
+INFO: [Synth 8-6157] synthesizing module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip' [c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip/synth/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip.v:60]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip' (38#1) [c:/HLS/softmax2/solution1/impl/ip/tmp.gen/sources_1/ip/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip/synth/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip.v:60]
+INFO: [Synth 8-256] done synthesizing module 'softmax1_dexp_64ns_64ns_64_18_full_dsp_1' (39#1) [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1_dexp_64ns_64ns_64_18_full_dsp_1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'softmax1' (40#1) [C:/HLS/softmax2/solution1/impl/ip/hdl/vhdl/softmax1.vhd:27]
+WARNING: [Synth 8-3917] design softmax1 has port ap_local_block driven by constant 0
+WARNING: [Synth 8-3917] design softmax1 has port ap_local_deadlock driven by constant 0
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized39 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized39 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized39 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized39 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized39 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized146 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized146 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized146 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_ne_im is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized144 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized144 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized144 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized144 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized144 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[15] in module carry_chain__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized142 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized142 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized142 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized142 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized142 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized140 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized140 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized140 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized138 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized138 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized138 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized136 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized136 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.283 . Memory (MB): peak = 1728.598 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 503 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1728.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  FDE => FDRE: 18 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1728.598 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized14) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized14) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'sitodp_32ns_64_6_no_dsp_1_U1/softmax1_sitodp_32ns_64_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_sign_delay' (delay__parameterized4) to 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_sign_delay'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'dexp_64ns_64ns_64_18_full_dsp_1_U2/softmax1_dexp_64ns_64ns_64_18_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design softmax1 has port ap_local_block driven by constant 0
+WARNING: [Synth 8-3917] design softmax1 has port ap_local_deadlock driven by constant 0
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.runt_srl_loop.i_fdre) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre0) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre1) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay/dN_hlutnm.runt_srl_loop.i_fdre) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 1728.598 ; gain = 162.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:29 . Memory (MB): peak = 1736.242 ; gain = 169.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:30 . Memory (MB): peak = 1740.121 ; gain = 173.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1769.277 ; gain = 202.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    29|
+|3     |DSP48E1 |    26|
+|18    |LUT1    |    12|
+|19    |LUT2    |   211|
+|20    |LUT3    |   142|
+|21    |LUT4    |   179|
+|22    |LUT5    |   212|
+|23    |LUT6    |  1545|
+|24    |MUXCY   |   230|
+|25    |MUXF7   |   423|
+|26    |MUXF8   |     7|
+|27    |SRL16E  |   197|
+|28    |XORCY   |   111|
+|29    |FDE     |    18|
+|30    |FDRE    |  1381|
+|31    |FDSE    |    11|
+|32    |IBUF    |    35|
+|33    |OBUF    |    37|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 244 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:34 . Memory (MB): peak = 1774.816 ; gain = 208.363
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1774.816 ; gain = 208.363
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1774.816 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 844 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1795.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 80 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 62 instances
+  FDE => FDRE: 18 instances
+
+Synth Design complete, checksum: 59002097
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 1795.598 ; gain = 229.145
+INFO: [Common 17-1381] The checkpoint 'C:/VIVADO/softmax1x1/project_1/project_1.runs/synth_1/softmax1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file softmax1_utilization_synth.rpt -pb softmax1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 26 18:13:12 2024...

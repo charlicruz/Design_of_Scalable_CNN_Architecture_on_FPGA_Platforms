@@ -1,0 +1,1 @@
+void general_fp (ap_ufixed<8, 1, AP_RND_CONV, AP_SAT> in1[28][28], ap_fixed<8, 0, AP_RND_CONV, AP_SAT> in2[9][9][20], ap_fixed<8, 0, AP_RND_CONV, AP_SAT> in3[100][2000], ap_fixed<8, 1, AP_RND_CONV, AP_SAT> in4[10][100], ap_ufixed<8, 0, AP_RND_CONV, AP_SAT> out[10][1]);

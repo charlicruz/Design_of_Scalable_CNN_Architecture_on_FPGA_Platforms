@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VIVADO/ReLu/ReLu.srcs/sources_1/ReLU_flow_control_loop_pipe.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ReLU_flow_control_loop_pipe'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VIVADO/ReLu/ReLu.srcs/sources_1/ReLU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ReLU'

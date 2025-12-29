@@ -1,0 +1,1 @@
+int softmax1(int);

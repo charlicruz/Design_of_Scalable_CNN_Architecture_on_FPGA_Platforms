@@ -1,0 +1,43 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_conv_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_dexp_64ns_64ns_64_12_full_dsp_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_flow_control_loop_delay_pipe.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_flow_control_loop_pipe.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_flow_control_loop_pipe_sequential_init.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mac_muladd_7ns_11ns_11ns_18_4_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mul_4ns_10ns_12_1_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mul_5ns_10ns_13_1_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mul_8ns_8s_16_1_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mul_8s_8ns_16_1_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mult1_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mult2_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_mult2_DP_fp_Pipeline_VITIS_LOOP_8_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_pool_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_relu1_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_relu2_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_reshape_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_softmax_DP_fp.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_softmax_DP_fp_ex_V_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_softmax_DP_fp_Pipeline_VITIS_LOOP_11_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_softmax_DP_fp_Pipeline_VITIS_LOOP_16_2.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t1_V_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t1_V_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t2_V_0_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t2_V_0_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t3_V_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t3_V_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t4_V_0_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t4_V_0_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t5_V_0_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t5_V_0_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t6_V_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t6_V_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t7_V_0_RAM_AUTO_1R1W.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_t7_V_0_RAM_AUTO_1R1W_memcore.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp_udiv_32ns_32ns_32_36_1.vhd" \
+"../../../../project_3.ip_user_files/ipstatic/hdl/vhdl/general_fp.vhd" \
+"../../../../project_3.srcs/sim_1/new/tb_general_fp_0.vhd" \
+
+# Do not sort compile order
+nosort

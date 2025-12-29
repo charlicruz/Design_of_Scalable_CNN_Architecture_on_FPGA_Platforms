@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_3.ip_user_files/ipstatic/hdl/ip/general_fp_dexp_64ns_64ns_64_12_full_dsp_1_ip.v" \
+"../../../../project_3.gen/sources_1/ip/general_fp_0/sim/general_fp_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
