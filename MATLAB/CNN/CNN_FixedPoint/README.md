@@ -1,15 +1,25 @@
-# Convolutional-Neural-Network-on-MATLAB
+# CNN_FixedPoint (MATLAB)
 
-A convolutional neural network (CNN or ConvNet) is one of the most popular algorithms for deep learning, a type of machine learning in which a model learns to perform classification tasks directly from images, video, text, or sound.
+This folder contains the **fixed-point MATLAB implementation** used for profiling, conversion, and evaluation of fixed-point behavior prior to HLS translation.
 
-CNNs are particularly useful for finding patterns in images to recognize objects, faces, and scenes. They learn directly from image data, using patterns to classify images and eliminating the need for manual feature extraction.
+## Contents
+- `MnistConv.mat`: Base model/parameters used by the workflow.
+- `Pool_fixpt.m`, `ReLU1_fixpt.m`, ...: Fixed-point converted scripts for specific blocks (generated/managed via MATLAB fixed-point tools).
+- `*_wrapper_fixpt.m`: Wrapper scripts associated with the fixed-point converted blocks (used to execute/validate block behavior).
+- `*.prj`: Fixed-point conversion project files per block (document converter settings).
+- `Pool.m`, `ReLU1.m`, `ReLU2.m`, ...: Original block definitions used for conversion and validation.
+- `PlotFeatures.m`: Optional plotting helper.
 
-Applications that call for object recognition and computer vision — such as self-driving vehicles and face-recognition applications — rely heavily on CNNs. Depending on your application, you can build a CNN from scratch, or use a pretrained model with your dataset.
+## Reproduction (Fixed-point)
+1. Open MATLAB and set the working directory to this folder:
+   - `MATLAB/CNN/CNN_FixedPoint/`
+2. Run the fixed-point block scripts as needed:
+   - Example: `Pool_fixpt.m` (and/or `Pool_wrapper_fixpt.m`)
+   - Example: `ReLU1_fixpt.m` (and/or `ReLU1_wrapper_fixpt.m`)
+3. Expected output:
+   - Fixed-point behavior at block level under the selected rounding/overflow configuration.
+   - These results support the bit-width/overflow/rounding sensitivity reported in the manuscript.
 
-Using MATLAB® with Deep Learning Toolbox™ enables you to train your own CNN from scratch or use a pretrained model to perform transfer learning.
-
-Which method you choose depends on your available resources and the type of application you are building.
-
-To train a network from scratch, the architect is required to define the number of layers and filters, along with other tunable parameters. Training an accurate model from scratch also requires massive amounts of data, on the order of millions of samples, which can take an immense amount of time.
-
-A common alternative to training a CNN from scratch is to use a pretrained model to automatically extract features from a new data set. This method, called transfer learning, is a convenient way to apply deep learning without a huge dataset and long computation and training time.
+## Notes
+- The `.prj` files capture the fixed-point converter configuration (rounding, overflow, word/fraction length proposals, etc.).
+- This folder supports the workflow stage: MATLAB fixed-point reference used as the golden model for HLS C simulation and RTL/C co-simulation verification.
