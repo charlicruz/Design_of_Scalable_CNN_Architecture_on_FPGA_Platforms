@@ -1,50 +1,36 @@
-# \# CNN\_FloatingPoint (MATLAB)
+# Vivado (RTL integration, simulation, and utilization reports)
 
-# 
+This folder contains the **Vivado projects** used to integrate and verify the generated RTL/IP blocks and to obtain post-synthesis / post-implementation **resource utilization** reports referenced in the manuscript.
 
-# This folder contains the \*\*floating-point (baseline)\*\* MATLAB implementation of the MnistConv CNN used in the paper.
+## Top-level structure
+- `ReLu/` : Vivado project for the ReLU block (includes project file `ReLu.xpr`).
+- `SoftMax/` : Vivado project for the Softmax block (project structure analogous to ReLu).
+- `relu1x1/project_1/` : Additional Vivado project variant (relu1x1).
+- `softmax1x1/project_1/` : Additional Vivado project variant (softmax1x1).
+- `TESTBENCHS/` : Simulation assets (wave configurations and simulation runs), including:
+  - `tb_general_time_synth.wcfg` (synthesis-time wave config)
+  - `tb_general_time_impl.wcfg` (implementation-time wave config)
+  - `sim_1/` (simulation run directory)
 
-# 
+## Reproduction (Vivado)
+### A) Open the project
+1. Launch Vivado (same version as reported in the paper).
+2. Open one of the provided projects:
+   - Example: `Vivado/ReLu/ReLu.xpr`
 
-# \## Contents
+### B) Synthesis / Implementation (resource reports)
+1. Run **Synthesis** and generate the utilization report:
+   - Look for `utilization_synth.rpt` or the GUI “Report Utilization”.
+2. Run **Implementation** (optional if you want post-implementation numbers) and generate the utilization report:
+   - Look for `utilization_impl.rpt` or “Report Utilization” after implementation.
+3. Expected output:
+   - LUT/FF/BRAM/DSP counts and percentages consistent with the paper’s post-synthesis (and/or post-implementation) tables.
 
-# \- `MnistConv.m`: Main script/model entry for the floating-point CNN (training/inference entry depending on configuration).
+### C) Simulation (optional)
+1. Use the simulation artifacts under `Vivado/TESTBENCHS/` (e.g., `sim_1/`) to run behavioral simulation.
+2. Waveform configurations:
+   - `tb_general_time_synth.wcfg` and `tb_general_time_impl.wcfg`
 
-# \- `TestMnistConv.m`: \*\*Evaluation script\*\* for reproducing floating-point accuracy on the predefined MNIST subset.
-
-# \- `Conv.m`, `ReLU.m`, `Pool.m`, `Softmax.m`: Layer/block implementations used by the forward path.
-
-# \- `loadMNISTImages.m`, `loadMNISTLabels.m`: MNIST loading utilities.
-
-# \- `MnistConv.mat`: Saved model/parameters.
-
-# \- `W1.mat`, `W5.mat`, `Wo.mat`: Weight matrices (Conv/FC/output).
-
-# \- `PlotFeatures.m`, `display\_network.m`: Optional plotting/visualization helpers.
-
-# 
-
-# \## Reproduction (Floating-point)
-
-# 1\. Open MATLAB and set the working directory to this folder:
-
-# &#x20;  - `MATLAB/CNN/CNN\_FloatingPoint/`
-
-# 2\. Ensure MNIST data can be loaded by `loadMNISTImages.m` / `loadMNISTLabels.m`.
-
-# 3\. Run:
-
-# &#x20;  - `TestMnistConv.m`
-
-# 4\. Expected output:
-
-# &#x20;  - Floating-point accuracy on the \*\*held-out evaluation subset\*\* used in the manuscript.
-
-# 
-
-# \## Notes
-
-# \- The paper reports results on a controlled MNIST subset (8,000 train / 2,000 test). If subset indices are provided at repo level, use them to guarantee deterministic reproduction.
-
-# \- This folder is the baseline reference for the cross-stage verification (MATLAB float → MATLAB fixed-point → HLS/RTL).ATLAB CNN functions, fixed-point scripts,
-
+## Notes
+- Project-generated folders such as `*.cache/`, `*.runs/`, `*.sim/`, and `*.gen/` are Vivado build artifacts.
+- For strict reproducibility, use the same repository tag/commit indicated in the manuscript and keep the Vivado version consistent with the reported toolchain.
