@@ -1,20 +1,82 @@
-# Conversions to C (MATLAB Coder / codegen)
+# Design of CNN Architecture on FPGA Platforms — Reproducibility Repository
 
-This folder contains **per-block code generation artifacts** produced by MATLAB Coder (e.g., MEX binaries and codegen outputs). These files support intermediate validation and accelerated execution of specific functions.
+This repository accompanies the manuscript submitted to *Array* and provides the code and projects required to reproduce the main results:  
+(i) MATLAB floating-point baseline, (ii) MATLAB fixed-point profiling/conversion, (iii) Vitis HLS C simulation and RTL/C co-simulation (cycle/latency reports), and (iv) Vivado synthesis/implementation (resource utilization reports).
 
-## Contents
-- Subfolders are organized by function/block (e.g., `ReLu/`, `Relu2/`, `Softmax/`, `Suma/`, `relu_1x1/`, `softmax2/`).
-- Generated outputs typically appear under `*/codegen/`, for example:
-  - `ReLu/codegen/mex/ReLU/ReLU_mex.mexw64`
+**Canonical repository:**  
+https://github.com/charlicruz/Design_of_Scalable_CNN_Architecture_on_FPGA_Platforms  
+**Version used in the manuscript:** tag/commit: `vX.Y` / `<COMMIT_HASH>` (fill with the exact revision used for submission)
 
-## Purpose
-- Provides an intermediate step to validate or accelerate individual blocks using code-generated C/MEX.
-- Useful for checking functional equivalence and performance before integrating blocks into the HLS C/C++ flow.
+---
 
-## Reproduction
-- These artifacts are not always required to reproduce the paper’s main tables unless explicitly stated.
-- If regeneration is needed, use MATLAB Coder (`codegen`) on the corresponding MATLAB functions and follow the configuration in your MATLAB environment.
+## Repository structure (top-level)
 
-## Notes
-- Generated binaries (e.g., `.mexw64`) are OS/architecture dependent.
-- For strict reproducibility, the main workflow outputs are reproduced via the MATLAB fixed-point stage and the Vitis HLS C/RTL co-simulation stage.
+- **`MATLAB/`**  
+  MATLAB reference implementation and fixed-point tooling.
+  - `MATLAB/CNN/CNN_FloatingPoint/` — floating-point baseline (run `TestMnistConv.m`)
+  - `MATLAB/CNN/CNN_FixedPoint/` — fixed-point profiling/conversion (run `*_fixpt.m` and `*_wrapper_fixpt.m`)
+  - `MATLAB/Conversions to C/` — optional MATLAB Coder/codegen artifacts (not required unless explicitly reproduced)
+  - See: `MATLAB/CNN/CNN_FloatingPoint/README.md`, `MATLAB/CNN/CNN_FixedPoint/README.md`, `MATLAB/Conversions to C/README.md`
+
+- **`Vitis HLS/`**  
+  C/C++ HLS blocks + testbenches (`*_tb.cpp`) for C simulation and RTL/C co-simulation.
+  - Convolution, pooling, FC/multipliers and top-level glue (`general*`)
+  - See: `Vitis HLS/README.md`
+
+- **`Vivado/`**  
+  Vivado projects (`*.xpr`) used to generate utilization reports and optional simulations.
+  - `ReLu/`, `SoftMax/`, `relu1x1/project_1/`, `softmax1x1/project_1/`
+  - `TESTBENCHS/` — simulation assets (`*.wcfg`, `sim_1/`)
+  - See: `Vivado/README.md`
+
+---
+
+## Quick reproduction (end-to-end)
+
+### 1) MATLAB (floating-point baseline)
+1. Open MATLAB and set the working directory to:
+   - `MATLAB/CNN/CNN_FloatingPoint/`
+2. Run:
+   - `TestMnistConv.m`
+3. Output:
+   - Floating-point accuracy on the predefined MNIST evaluation subset used in the paper.
+
+### 2) MATLAB (fixed-point profiling/conversion)
+1. Set the working directory to:
+   - `MATLAB/CNN/CNN_FixedPoint/`
+2. Run the Fixed-Point Converter entry scripts:
+   - `*_fixpt.m` and their `*_wrapper_fixpt.m` wrappers
+3. Output:
+   - Fixed-point behavior/profiling reports supporting per-layer `(W,I)` selection.
+
+### 3) Vitis HLS (latency/cycle reports)
+1. Open Vitis HLS and create/open a project pointing to sources in `Vitis HLS/`.
+2. Use the provided `*_tb.cpp` testbenches:
+   - Run **C Simulation** and **RTL/C Co-simulation**
+3. Output:
+   - HLS reports (II/latency/cycles) used for the manuscript’s timing tables.
+
+### 4) Vivado (resource utilization)
+1. Open one of the provided Vivado projects (example):
+   - `Vivado/ReLu/ReLu.xpr`
+2. Run **Synthesis** (and optionally **Implementation**) and generate **Report Utilization**.
+3. Output:
+   - LUT/FF/BRAM/DSP utilization used in the manuscript’s resource tables.
+
+---
+
+## Toolchain (fill with your exact versions)
+- MATLAB: R20XXx + Fixed-Point Designer  
+- Vitis HLS / Vivado: 20XX.X  
+- Target FPGA: Artix-7 XC7A100T  
+- OS: Ubuntu XX.XX (or your host OS)
+
+---
+
+## Notes on dataset protocol
+The paper reports results on a controlled MNIST subset (8,000 train / 2,000 test) to enable rapid fixed-point/HLS iteration. Ensure you use the same subset protocol described in the manuscript for deterministic reproduction.
+
+---
+
+## Contact
+For questions or issues reproducing results, please open a GitHub Issue in this repository.
