@@ -7,7 +7,7 @@ This repository accompanies the manuscript submitted to *Array* and provides the
 https://github.com/charlicruz/Design_of_Scalable_CNN_Architecture_on_FPGA_Platforms  
 **Version used in the manuscript:** tag/commit: `array-r3` / `59cf8eb`
 
-## Toolchain and dataset protocol (used in the manuscript)
+## Toolchain and dataset protocol 
 
 - **MATLAB:** R2024b + Fixed-Point Designer  
 - **Xilinx tools:** Vitis HLS / Vivado v2020  
@@ -73,11 +73,11 @@ https://github.com/charlicruz/Design_of_Scalable_CNN_Architecture_on_FPGA_Platfo
 
 ---
 
-## Toolchain (fill with your exact versions)
-- MATLAB: R20XXx + Fixed-Point Designer  
-- Vitis HLS / Vivado: 20XX.X  
+## Toolchain 
+- MATLAB: R2024b + Fixed-Point Designer  
+- Vitis HLS / Vivado: 2200 
 - Target FPGA: Artix-7 XC7A100T  
-- OS: Ubuntu XX.XX (or your host OS)
+- OS: Windows 10
 
 ---
 
