@@ -5,7 +5,7 @@ This repository accompanies the manuscript submitted to *Array* and provides the
 
 **Canonical repository:**  
 https://github.com/charlicruz/Design_of_Scalable_CNN_Architecture_on_FPGA_Platforms  
-**Version used in the manuscript:** tag/commit: `array-r3` / `<COMMIT_HASH>` (fill with the exact revision used for submission)
+**Version used in the manuscript:** tag/commit: `array-r3` / `59cf8eb`
 
 ---
 
