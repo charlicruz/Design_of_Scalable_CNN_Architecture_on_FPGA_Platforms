@@ -1,15 +1,50 @@
-# Convolutional-Neural-Network-on-MATLAB
+# \# CNN\_FloatingPoint (MATLAB)
 
-A convolutional neural network (CNN or ConvNet) is one of the most popular algorithms for deep learning, a type of machine learning in which a model learns to perform classification tasks directly from images, video, text, or sound.
+# 
 
-CNNs are particularly useful for finding patterns in images to recognize objects, faces, and scenes. They learn directly from image data, using patterns to classify images and eliminating the need for manual feature extraction.
+# This folder contains the \*\*floating-point (baseline)\*\* MATLAB implementation of the MnistConv CNN used in the paper.
 
-Applications that call for object recognition and computer vision — such as self-driving vehicles and face-recognition applications — rely heavily on CNNs. Depending on your application, you can build a CNN from scratch, or use a pretrained model with your dataset.
+# 
 
-Using MATLAB® with Deep Learning Toolbox™ enables you to train your own CNN from scratch or use a pretrained model to perform transfer learning.
+# \## Contents
 
-Which method you choose depends on your available resources and the type of application you are building.
+# \- `MnistConv.m`: Main script/model entry for the floating-point CNN (training/inference entry depending on configuration).
 
-To train a network from scratch, the architect is required to define the number of layers and filters, along with other tunable parameters. Training an accurate model from scratch also requires massive amounts of data, on the order of millions of samples, which can take an immense amount of time.
+# \- `TestMnistConv.m`: \*\*Evaluation script\*\* for reproducing floating-point accuracy on the predefined MNIST subset.
 
-A common alternative to training a CNN from scratch is to use a pretrained model to automatically extract features from a new data set. This method, called transfer learning, is a convenient way to apply deep learning without a huge dataset and long computation and training time.
+# \- `Conv.m`, `ReLU.m`, `Pool.m`, `Softmax.m`: Layer/block implementations used by the forward path.
+
+# \- `loadMNISTImages.m`, `loadMNISTLabels.m`: MNIST loading utilities.
+
+# \- `MnistConv.mat`: Saved model/parameters.
+
+# \- `W1.mat`, `W5.mat`, `Wo.mat`: Weight matrices (Conv/FC/output).
+
+# \- `PlotFeatures.m`, `display\_network.m`: Optional plotting/visualization helpers.
+
+# 
+
+# \## Reproduction (Floating-point)
+
+# 1\. Open MATLAB and set the working directory to this folder:
+
+# &#x20;  - `MATLAB/CNN/CNN\_FloatingPoint/`
+
+# 2\. Ensure MNIST data can be loaded by `loadMNISTImages.m` / `loadMNISTLabels.m`.
+
+# 3\. Run:
+
+# &#x20;  - `TestMnistConv.m`
+
+# 4\. Expected output:
+
+# &#x20;  - Floating-point accuracy on the \*\*held-out evaluation subset\*\* used in the manuscript.
+
+# 
+
+# \## Notes
+
+# \- The paper reports results on a controlled MNIST subset (8,000 train / 2,000 test). If subset indices are provided at repo level, use them to guarantee deterministic reproduction.
+
+# \- This folder is the baseline reference for the cross-stage verification (MATLAB float → MATLAB fixed-point → HLS/RTL).ATLAB CNN functions, fixed-point scripts,
+
