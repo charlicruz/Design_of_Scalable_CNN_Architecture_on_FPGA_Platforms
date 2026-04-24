@@ -1,4 +1,4 @@
-# Design of CNN Architecture on FPGA Platforms — Reproducibility Repository
+#  A numerically workflow for fixed-point CNN deployment on low-cost FPGAs — Reproducibility Repository
 
 This repository accompanies the manuscript submitted to *Array* and provides the code and projects required to reproduce the main results:  
 (i) MATLAB floating-point baseline, (ii) MATLAB fixed-point profiling/conversion, (iii) Vitis HLS C simulation and RTL/C co-simulation (cycle/latency reports), and (iv) Vivado synthesis/implementation (resource utilization reports).
