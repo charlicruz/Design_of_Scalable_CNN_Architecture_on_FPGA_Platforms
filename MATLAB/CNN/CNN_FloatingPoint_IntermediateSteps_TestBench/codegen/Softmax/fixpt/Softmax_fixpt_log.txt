@@ -1,0 +1,4 @@
+
+Warnings: 
+
+File: C:\MATLAB\Redes\CNN_FloatingPoint_IntermediateSteps_TestBench\Softmax.m, line : 8, column : 17. Unable to generate math replacement function for 'exp'. The input range for the expression 'x(i)' could not be inferred. Consider assigning the expression to a variable and passing it as an input to the function, or providing  design min and design max.

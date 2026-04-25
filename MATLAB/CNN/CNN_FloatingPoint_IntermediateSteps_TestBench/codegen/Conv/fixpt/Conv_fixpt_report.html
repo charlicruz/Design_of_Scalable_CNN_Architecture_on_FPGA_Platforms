@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for Conv_fixpt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+</style>
+</head>
+<body>
+<h3>Generated on  2024-04-29 14:12:19</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>Conv_fixpt<span></h2>
+<pre>function y = Conv_fixpt(x, W)
+
+fm = get_fimath();
+
+[fmo_1, fmo_2, fmo_3] = size(W);
+wrow = fi(fmo_1, 0, 4, 0, fm);
+wcol = fi(fmo_2, 0, 4, 0, fm);
+numFilters = fi(fmo_3, 0, 5, 0, fm);
+[fmo_4, fmo_5, ~         ] = size(x);
+xrow = fi(fmo_4, 0, 5, 0, fm);
+xcol = fi(fmo_5, 0, 5, 0, fm);
+
+yrow = fi(fi_signed(xrow) - wrow + fi(1, 0, 1, 0, fm), 0, 5, 0, fm);
+ycol = fi(fi_signed(xcol) - wcol + fi(1, 0, 1, 0, fm), 0, 5, 0, fm);
+
+y = fi(zeros(fi_toint(yrow), fi_toint(ycol), fi_toint(numFilters)), 1, 16, 8, fm);
+
+    for k = fi(1, 0, 1, 0, fm):numFilters
+    filter = fi(W(:, :, k), 1, 16, 15, fm);
+    %filter = rot90(squeeze(filter), 2);
+    %y(:, :, k) = conv2(x,filter, 'valid');
+    y(:, :, k)=my_conv2_valid1(fi(x, 0, 16, 7, fm),fi(filter, 1, 16, 15, fm));
+    end
+
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">W</TD><TD class="left">numerictype(1, 16, 15) 9 x 9 x 20 </TD><TD class="right">-0.453094482421875</TD><TD class="right">0.41290283203125</TD></TR>
+<TR class="b">
+<TD class="left">filter</TD><TD class="left">numerictype(1, 16, 15) 9 x 9 </TD><TD class="right">-0.453094482421875</TD><TD class="right">0.41290283203125</TD></TR>
+<TR class="a">
+<TD class="left">fmo_1</TD><TD class="left">double</TD><TD class="right">9</TD><TD class="right">9</TD></TR>
+<TR class="b">
+<TD class="left">fmo_2</TD><TD class="left">double</TD><TD class="right">9</TD><TD class="right">9</TD></TR>
+<TR class="a">
+<TD class="left">fmo_3</TD><TD class="left">double</TD><TD class="right">20</TD><TD class="right">20</TD></TR>
+<TR class="b">
+<TD class="left">fmo_4</TD><TD class="left">double</TD><TD class="right">28</TD><TD class="right">28</TD></TR>
+<TR class="a">
+<TD class="left">fmo_5</TD><TD class="left">double</TD><TD class="right">28</TD><TD class="right">28</TD></TR>
+<TR class="b">
+<TD class="left">k</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">numFilters</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">20</TD><TD class="right">20</TD></TR>
+<TR class="b">
+<TD class="left">wcol</TD><TD class="left">numerictype(0, 4, 0)</TD><TD class="right">9</TD><TD class="right">9</TD></TR>
+<TR class="a">
+<TD class="left">wrow</TD><TD class="left">numerictype(0, 4, 0)</TD><TD class="right">9</TD><TD class="right">9</TD></TR>
+<TR class="b">
+<TD class="left">x</TD><TD class="left">numerictype(0, 16, 7) 28 x 28 </TD><TD class="right">0</TD><TD class="right">1</TD></TR>
+<TR class="a">
+<TD class="left">xcol</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">28</TD><TD class="right">28</TD></TR>
+<TR class="b">
+<TD class="left">xrow</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">28</TD><TD class="right">28</TD></TR>
+<TR class="a">
+<TD class="left">y</TD><TD class="left">numerictype(1, 16, 8) 20 x 20 x 20 </TD><TD class="right">-6.38671875</TD><TD class="right">8.3984375</TD></TR>
+<TR class="b">
+<TD class="left">ycol</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">20</TD><TD class="right">20</TD></TR>
+<TR class="a">
+<TD class="left">yrow</TD><TD class="left">numerictype(0, 5, 0)</TD><TD class="right">20</TD><TD class="right">20</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>my_conv2_valid1<span></h2>
+<pre>function resultado = my_conv2_valid1(x, filtro)
+
+    fm = get_fimath();
+
+    resultado = fi(zeros(20, 20), 1, 16, 8, fm);
+
+    % Aplicar el filtro bidimensional solo en las regiones válidas
+    for i = 1:(20)
+        for j = 1:(20)
+            submatriz = fi(x(i:i+8, j:j+8), 0, 16, 8, fm);
+            % Realizar la convolución para esta submatriz y almacenar el resultado
+            resultado(i, j) = sum(sum(submatriz .* filtro));
+        end
+    end
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">filtro</TD><TD class="left">numerictype(1, 16, 15) 9 x 9 </TD><TD class="right">-0.453094482421875</TD><TD class="right">0.41290283203125</TD></TR>
+<TR class="b">
+<TD class="left">i</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">20</TD></TR>
+<TR class="a">
+<TD class="left">j</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">20</TD></TR>
+<TR class="b">
+<TD class="left">resultado</TD><TD class="left">numerictype(1, 16, 8) 20 x 20 </TD><TD class="right">-6.38671875</TD><TD class="right">8.3984375</TD></TR>
+<TR class="a">
+<TD class="left">submatriz</TD><TD class="left">numerictype(0, 16, 8) 9 x 9 </TD><TD class="right">0</TD><TD class="right">1</TD></TR>
+<TR class="b">
+<TD class="left">x</TD><TD class="left">numerictype(0, 16, 7) 28 x 28 </TD><TD class="right">0</TD><TD class="right">1</TD></TR>
+</TABLE>
+
+</body>
+</html>
