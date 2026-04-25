@@ -5,7 +5,7 @@ This repository accompanies the manuscript submitted to *Array* and provides the
 
 **Repository:**  
 https://github.com/charlicruz/A_numerically_workflow_for_fixed-point_CNN_deployment_on_FPGA
-**Version used in the manuscript:** tag/commit: `array-r3` / 
+**Version used in the manuscript:** tag/commit: `array-r3` 
 
 ## Toolchain and dataset protocol 
 
