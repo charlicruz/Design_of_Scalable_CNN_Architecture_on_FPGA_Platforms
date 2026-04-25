@@ -4,12 +4,12 @@ This repository accompanies the manuscript submitted to *Array* and provides the
 (i) MATLAB floating-point baseline, (ii) MATLAB fixed-point profiling/conversion, (iii) Vitis HLS C simulation and RTL/C co-simulation (cycle/latency reports), and (iv) Vivado synthesis/implementation (resource utilization reports).
 
 **Repository:**  
-https://github.com/charlicruz/Design_of_Scalable_CNN_Architecture_on_FPGA_Platforms  
-**Version used in the manuscript:** tag/commit: `array-r3` / `59cf8eb`
+https://github.com/charlicruz/A_numerically_workflow_for_fixed-point_CNN_deployment_on_FPGA
+**Version used in the manuscript:** tag/commit: `array-r3` / 
 
 ## Toolchain and dataset protocol 
 
-- **MATLAB:** R2024b + Fixed-Point Designer  
+- **MATLAB:** R2023b + Fixed-Point Designer 23.2
 - **Xilinx tools:** Vitis HLS / Vivado v2020  
 - **Target FPGA:** Artix-7 XC7A100T  
 - **Dataset:** MNIST (controlled subset used in this paper: **8,000 train / 2,000 test**)  
